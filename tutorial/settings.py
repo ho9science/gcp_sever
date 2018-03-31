@@ -25,7 +25,7 @@ SECRET_KEY = '+1v&2yqhh_39o2ttf+7thq9()te6&a3ib^39g%j5714v^**36e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','35.187.210.32']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'quickstart',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -83,10 +84,10 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kkma',
+        'NAME': 'gcp',
         'USER': 'root',
         'PASSWORD': 'water',
-        'HOST': 'localhost',
+        'HOST': '35.200.109.0',
         'PORT': '3306',
     }
 }
@@ -135,3 +136,4 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     )
 }
+SECURE_SSL_REDIRECT = False
